@@ -18,6 +18,18 @@ class Student{
     isEligibilityToCollege(){
         (this.marks>40)? console.log('Eligible') : console.log('Not Eligible');
     }
+
+    eligibileForPlacement(minimumBoardMarks){
+        
+        return (age)=>{
+            if(this.age>=age && this.marks>=minimumBoardMarks){
+                console.log(`${this.name} is Eligible for placement`);
+            }
+            else{
+                console.log(`${this.name} is not Eligible for placement`)
+            }
+        }
+    }
 }
 
 let student1 = new Student('mayank' , 24 , 12345 , 100)
@@ -28,4 +40,6 @@ let student5 = new Student('john' , 29 , 2345 , 10)
 // console.log(student1)
 // student1.isEligibilityToCollege();
 // student2.isEligibilityToCollege();
-console.log(Student.count);
+//console.log(Student.count);
+student1.eligibileForPlacement(20)(10);
+student2.eligibileForPlacement(50)(23);
